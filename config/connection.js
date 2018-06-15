@@ -1,5 +1,6 @@
 //dependencies
 const mysql = require('mysql');
+require('dotenv').config();
 
 
 module.exports = (app)=>{
@@ -7,8 +8,8 @@ module.exports = (app)=>{
 const connection = mysql.createConnection({
   host: 'localhost',
   port: '8889',
-  user: '',
-  password: '',
+  user: 'root',
+  password: process.env.PASS || 'root',
   database:'burgers_db'
 });
 
