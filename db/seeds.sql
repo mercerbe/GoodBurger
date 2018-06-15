@@ -1,11 +1,9 @@
-INSERT INTO burgers (burger_name, devoured, price) VALUES (
+INSERT INTO burgers (burger_name, devoured) VALUES (
   'good burger',
-  'false',
-  '5.00'
+  false
 );
 
-INSERT INTO burgers (burger_name, devoured, price) VALUES (
+INSERT INTO burgers (burger_name, devoured) VALUES (
   'double good burger',
-  'false',
-  '9.00'
+  false
 );

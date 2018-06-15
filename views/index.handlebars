@@ -1,1 +1,26 @@
-<button type="submit" name="button">Submit</button>
+<!-- form to type in new burger -->
+<div class="container">
+  <form class="" action="burger/insert" method="POST">
+    <label for="add_burger">Create Your Good Burger:</label>
+    <input type="text" name="" value="">
+    <button type="submit" name="add">Add Burger</button>
+  </form>
+</div>
+<!-- list of burgers where devoured == false -->
+<ul>
+{{#each burgers}}{{#unless devoured}}
+
+<li>{{id}}{{burger_name}}</li>
+
+{{/unless}}{{/each}}
+<button type="submit" name="devour">Devour</button>
+</ul>
+<!-- menu of burgers where devoured == true -->
+<ul>
+{{#each burgers}}{{#if devoured}}
+
+<li>{{id}}{{burger_name}}</li>
+
+{{/if}}{{/each}}
+<button type="button" name="remove">Clear</button>
+</ul>

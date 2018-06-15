@@ -1,6 +1,6 @@
-require('../config/orm.js');
+const orm = require('../config/orm.js');
 
-module.exports = (app)=>{
+
 
   let burger = {
 
@@ -21,4 +21,4 @@ module.exports = (app)=>{
     }
   };
 
-};
+module.exports = burger;

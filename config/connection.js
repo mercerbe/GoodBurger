@@ -2,8 +2,6 @@
 const mysql = require('mysql');
 require('dotenv').config();
 
-
-module.exports = (app)=>{
 //connect to sql
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -18,4 +16,4 @@ connection.connect((err)=>{
   console.log('connected with id: ' + connection.threadId);
 });
 
-};
+module.exports = connection;

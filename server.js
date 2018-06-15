@@ -17,12 +17,10 @@ app.engine('handlebars', exphbrs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 //+++++++++++routing++++++++++++++//
-const routes = require('./controllers/burgers_controller.js');
-app.use('/', routes);
+const router = require('./controllers/burgers_controller.js');
+app.use('/', router);
 //static
 app.use('/public', express.static(process.cwd() + '/public'));
-//paths
-require(path.join(__dirname, './models/burger'))(app);
 
 //express listening
 app.listen(PORT, ()=>{console.log('app listening on PORT:',PORT,'...');});
