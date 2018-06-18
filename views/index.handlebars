@@ -1,22 +1,31 @@
 <!-- form to type in new burger -->
 <div class="container">
-  <form class="" action="burger/insert" method="POST">
-    <label for="add_burger">Create Your Good Burger:</label>
-    <input type="text" name="" value="">
-    <button type="submit" name="add">Add Burger</button>
+  <form class="" action="burgers/insert" method="POST">
+    <div class="form-group">
+    <label for="new_burger">Create Your Good Burger:</label><br>
+    <input type="text" name="burger_name" value="">
+    <button type="submit" class"btn btn-warning" name="add">Add Burger</button>
+    </div>
   </form>
 </div>
 <!-- list of burgers where devoured == false -->
-<ul>
-{{#each burgers}}{{#unless devoured}}
-
-<li>{{id}}{{burger_name}}</li>
-
-{{/unless}}{{/each}}
-<button type="submit" name="devour">Devour</button>
-</ul>
+<div class="row">
+    <div class="col-md-6 eatem">
+        <h5>Burgers Available:</h5>
+        {{#each burgers}} {{#unless this.devoured}}
+        <form action="/burgers/eat/{{id}}" method="POST">
+            <div class="input-group">
+                <li class="form-control">{{ id }} {{burger_name}}</li>
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" type="submit">Devour</button>
+                </span>
+            </div>
+        </form>
+        {{/unless}} {{/each}}
+    </div>
 <!-- menu of burgers where devoured == true -->
 <ul>
+  <h5>Previously Devoured Burgers:</h5><br>
 {{#each burgers}}{{#if devoured}}
 
 <li>{{id}}{{burger_name}}</li>

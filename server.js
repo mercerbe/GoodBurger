@@ -20,7 +20,7 @@ app.set('view engine', 'handlebars');
 const router = require('./controllers/burgers_controller.js');
 app.use('/', router);
 //static
-app.use('/public', express.static(process.cwd() + '/public'));
+app.use(express.static("public"));
 
 //express listening
 app.listen(PORT, ()=>{console.log('app listening on PORT:',PORT,'...');});

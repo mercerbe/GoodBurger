@@ -21,17 +21,17 @@ router.get("/index", (req, res) => {
 })
 
 //insert
-router.post("/index", (req, res) => {
-  burger.create(req.body.burger_name, (data) => {
-    res.redirect(req.originalUrl);
+router.post("/burgers/insert", (req, res) => {
+  burger.insert(req.body.burger_name, (data) => {
+    res.redirect("/index");
   })
 })
 
 //update (devour)
-router.post("/index", (req, res) =>{
+router.post("/burgers/eat/:id", (req, res) =>{
   let id = req.params.id;
   burger.update(id, (data)=> {
-    res.redirect(req.originalUrl);
+    res.redirect("/index");
   })
 })
 
