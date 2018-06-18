@@ -1,6 +1,6 @@
 //dependencies
 const express = require('express');
-const burger = require('../models/burger.js');
+const burgers = require('../models/burgers.js');
 
 //use express router
 const router = express.Router();
@@ -14,15 +14,15 @@ router.get("/", (req, res) => {
 
 //all
 router.get("/index", (req, res) => {
-  burger.all((data)=>{
-    let obj = {burger:data};
+  burgers.all((data)=>{
+    let obj = {burgers : data};
     res.render("index", obj);
   })
 })
 
 //insert
 router.post("/burgers/insert", (req, res) => {
-  burger.insert(req.body.burger_name, (data) => {
+  burgers.insert(req.body.burger_name, (data) => {
     res.redirect("/index");
   })
 })
@@ -30,7 +30,7 @@ router.post("/burgers/insert", (req, res) => {
 //update (devour)
 router.post("/burgers/eat/:id", (req, res) =>{
   let id = req.params.id;
-  burger.update(id, (data)=> {
+  burgers.update(id, (data)=> {
     res.redirect("/index");
   })
 })

@@ -3,8 +3,10 @@
   <form class="" action="burgers/insert" method="POST">
     <div class="form-group">
     <label for="new_burger">Create Your Good Burger:</label><br>
-    <input type="text" name="burger_name" value="">
-    <button type="submit" class"btn btn-warning" name="add">Add Burger</button>
+    <input type="text" name="burger_name" value="" placeholder="your burger name">
+    <span class="input-group-btn">
+    <button type="submit" class="btn btn-warning" id="add">Add Burger</button>
+    </span>
     </div>
   </form>
 </div>
@@ -17,7 +19,7 @@
             <div class="input-group">
                 <li class="form-control">{{ id }} {{burger_name}}</li>
                 <span class="input-group-btn">
-                    <button class="btn btn-danger" type="submit">Devour</button>
+                    <button class="btn btn-danger" type="submit" id="devour">Devour</button>
                 </span>
             </div>
         </form>
@@ -28,8 +30,11 @@
   <h5>Previously Devoured Burgers:</h5><br>
 {{#each burgers}}{{#if devoured}}
 
-<li>{{id}}{{burger_name}}</li>
+<li>{{id}} {{burger_name}}</li>
 
 {{/if}}{{/each}}
-<button type="button" name="remove">Clear</button>
+<button type="button" class="btn btn-info" name="remove" id="clear">Clear</button>
 </ul>
+<script type="text/javascript">
+  
+</script>
