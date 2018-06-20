@@ -1,49 +1,60 @@
-<!-- form to type in new burger -->
 <div class="container">
   <div class="row">
-    <div class="col-md-5 create">
-      <form class="" action="burgers/insert" method="POST">
-        <div class="form-group">
-          <h5 for="new_burger">Create Your Good Burger:</h5><br>
-          <input type="text" name="burger_name" value="" placeholder="your burger name"><br><br>
-          <span class="input-group-btn">
-    <button type="submit" class="btn btn-warning" id="add">Add Burger</button>
-    </span>
-        </div>
-      </form>
-    </div>
-    <!-- menu of burgers where devoured == true -->
-    <div class="col-md-5 ml-auto devoured">
-      <ul>
-        <h5>Previously Devoured Burgers:</h5><br>
-        {{#each burgers}}
-          {{#if devoured}}
-            <li>{{id}} {{burger_name}}</li>
-          {{/if}}
-        {{/each}}
-        <button type="button" class="btn btn-info" name="remove" id="clear">Clear</button>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <!-- list of burgers where devoured == false -->
-    <div class="col-md-5 available">
-      <h5>Burgers Available:</h5>
-      {{#each burgers}}
-        {{#unless this.devoured}}
-          <form action="/burgers/eat/{{id}}" method="POST">
-            <div class="input-group">
-              <li class="form-control">{{ id }} {{burger_name}}</li>
+    <div class="col-md-6">
+      <!-- form to type in new burger -->
+      <div class="container">
+        <div class="col-md-12 create">
+          <form class="" action="burgers/insert" method="POST">
+            <div class="form-group">
+              <h5 for="new_burger">Create Your Good Burger:</h5><br>
+              <input type="text" name="burger_name" value="" placeholder="your burger name"><br><br>
               <span class="input-group-btn">
-                    <button class="btn btn-danger" type="submit" id="devour">Devour</button>
-                </span>
+                  <button type="submit" class="btn btn-warning" id="add">Add Burger</button>
+              </span>
             </div>
           </form>
-        {{/unless}}
-      {{/each}}
+        </div>
+        <!-- list of burgers where devoured == false -->
+        <div class="col-md-12 available">
+          <h5>Burgers Available:</h5>
+          {{#each burgers}}
+            {{#unless this.devoured}}
+              <form action="/burgers/eat/{{id}}" method="POST">
+                <div class="input-group">
+                  <li class="form-control">{{ id }} {{burger_name}}</li>
+                  <span class="input-group-btn">
+                    <button class="btn btn-danger" type="submit" id="devour">Devour</button>
+                </span>
+                </div>
+              </form>
+            {{/unless}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="container">
+        <!-- menu of burgers where devoured == true -->
+        <div class="col-md-12 ml-auto devoured">
+          <ul>
+            <h5>Previously Devoured Burgers:</h5><br>
+            {{#each burgers}}
+              {{#if devoured}}
+                <form action="/burgers/clear/{{id}}" method="POST">
+                  <div class="input-group">
+                    <li class="form-control">{{id}} {{burger_name}}</li>
+                    <span class="input-group-btn">
+                <button type="submit" class="btn btn-info" name="remove" id="clear">Clear</button>
+                </span>
+                  </div>
+                  <br>
+                </form>
+              {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

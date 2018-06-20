@@ -35,6 +35,14 @@ router.post("/burgers/eat/:id", (req, res) =>{
   })
 })
 
+//update (clear)
+router.post("/burgers/clear/:id", (req, res) => {
+  let cleared = req.params.id;
+    burgers.clear(cleared, (data) => {
+      res.redirect("/index");
+    })
+})
+
 
 
 module.exports = router;

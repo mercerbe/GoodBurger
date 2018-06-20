@@ -28,6 +28,14 @@ const connection = require('./connection.js');
         cb(res);
       });
     },
+    //clear one
+    clearOne: (id, cb) => {
+      let queryString = "DELETE FROM burgers WHERE ?;"
+      connection.query(queryString, {id: id}, (err, res) => {
+        if(err){throw err;}
+        cb(res);
+      })
+    }
 
 
   }

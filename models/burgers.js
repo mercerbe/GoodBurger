@@ -17,7 +17,13 @@ const orm = require('../config/orm.js');
     },
     update: (id, cb)=>{
       orm.updateOne(id, (res)=>{
-        console.log(id);
+        console.log(id + " added");
+        cb(res);
+      })
+    },
+    clear: (id, cb) => {
+      orm.clearOne(id, (res) => {
+        console.log(id + " cleared");
         cb(res);
       })
     }
