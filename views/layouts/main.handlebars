@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Good Burger</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./assets/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./assets/css/burger_style.css">
 </head>
+
 <body>
 
   <!--nav-->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="/">
-      <img src="./assets/img/burgerIcon.png" width="50" height="50" class="d-inline-block align-top" alt=""></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <img src="./assets/img/nickLogo.png" width="75" height="70" class="d-inline-block align-top" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="/">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://www.amazon.com/Good-Burger-Brian-Robbins/dp/B001D6DT3K" target="_blank">Watch the Movie</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" target="_blank">Menu</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" target="_blank">Contact</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://mercerbe.github.io/benmercer.org/" target="_blank">BenMercer.org</a>
-    </li>
-  </ul>
-  <ul class="navbar-nav flex-row mb-2">
-      <li class="nav-item">
-          <a class="nav-link py-1 pr-3" href="#"><i class="fab fa-facebook-square"></i></a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link py-1 pr-3" href="#"><i class="fab fa-instagram"></i></a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link py-1 pr-3" href="#"><i class="fab fa-twitter-square"></i></a>
-      </li>
-  </ul>
-</div>
-</nav>
-<!-- jumbo -->
-<div class="jumbotron">
-  <img src="./assets/img/goodBurgerLogo.png" alt="Good Burger" class="img-fluid">
-  <hr>
-  <p class="lead">"Welcome to Good Burger, home of the Good Burger, Can I take your order??"</p>
-</div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.amazon.com/Good-Burger-Brian-Robbins/dp/B001D6DT3K" target="_blank">Watch the Movie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://mercerbe.github.io/benmercer.org/" target="_blank">BenMercer.org</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- jumbo -->
+  <div class="jumbotron">
+    <img src="./assets/img/goodBurgerLogo.png" alt="Good Burger" class="img-fluid">
+    <hr>
+    <p class="lead">"Welcome to Good Burger, home of the Good Burger, Can I take your order??"</p>
+  </div>
 
 
   {{{ body }}}
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="footer-left">
+      <p class="footer-links">
+        <a href="/">Home</a> ·
+        <a href="https://github.com/mercerbe/GoodBurger" target="_blank">Github Repo</a> ·
+        <a href="https://expressjs.com/" target="_blank">Express</a> ·
+        <a href="https://handlebarsjs.com/" target="_blank">Handlebars</a>
+      </p>
+
+      <p>BenMercerCodes &copy; 2018</p>
+    </div>
+
+  </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -67,4 +75,5 @@
   <!--backstretch-->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 </body>
+
 </html>
