@@ -3,8 +3,8 @@ CREATE DATABASE burgers_db;
 USE burgers_db;
 
 CREATE TABLE burgers(
-  id INT not null auto_increment PRIMARY KEY,
+  id  INT auto_increment not null PRIMARY KEY,
   burger_name VARCHAR(100) not null,
-  devoured not null boolean default false,
+  devoured boolean default false
 
 );
