@@ -20,15 +20,23 @@ router.get("/index", (req, res) => {
   })
 })
 
+//api
+router.get('/api/burgers', (req, res) => {
+  burgers.all((data) => {
+    let obj = {burgers: data};
+    res.json(obj);
+  })
+})
+
 //insert
-router.post("/burgers/insert", (req, res) => {
+router.post("/api/burgers", (req, res) => {
   burgers.insert(req.body.burger_name, (data) => {
     res.redirect("/index");
   })
 })
 
 //update (devour)
-router.post("/burgers/eat/:id", (req, res) =>{
+router.post("/api/burgers/:id", (req, res) =>{
   let id = req.params.id;
   burgers.update(id, (data)=> {
     res.redirect("/index");

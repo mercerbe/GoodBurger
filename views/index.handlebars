@@ -4,7 +4,7 @@
       <!-- form to type in new burger -->
       <div class="container">
         <div class="col-md-12 create">
-          <form class="" action="burgers/insert" method="POST">
+          <form class="" action="api/burgers" method="POST">
             <div class="form-group">
               <h5 for="new_burger">Create Your Good Burger:</h5><br>
               <input type="text" name="burger_name" value="" placeholder="your burger name"><br><br>
@@ -19,7 +19,7 @@
           <h5>Burgers Available:</h5>
           {{#each burgers}}
             {{#unless this.devoured}}
-              <form action="/burgers/eat/{{id}}" method="POST">
+              <form action="/api/burgers/{{id}}" method="POST">
                 <div class="input-group">
                   <li class="form-control">{{ id }} {{burger_name}}</li>
                   <span class="input-group-btn">
@@ -58,6 +58,3 @@
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-</script>
