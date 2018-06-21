@@ -9,7 +9,7 @@ Any user may add a burger name to the menu. This input also adds the burger into
 
 ## Demo
 
-You can demo this web app on heroku at:  [Good Burger](https://google.com).
+You can demo this web app on heroku at:  [Good Burger](https://guarded-eyrie-96790.herokuapp.com/).
 
 ## Installation
 
